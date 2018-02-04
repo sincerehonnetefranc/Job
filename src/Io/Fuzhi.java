@@ -17,15 +17,26 @@ public class Fuzhi {
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		File file=new File("D:/eclipse-64.zip");
-		InputStream is=new FileInputStream(file);
-		byte[] a=new byte[(int) file.length()];
-		is.read(a);
+//		InputStream is=new FileInputStream(file);
+//		byte[] a=new byte[(int) file.length()];
+//		is.read(a);
 		
 		File file2=new File("D:/fuzhi.zip");
 		System.out.println(file2.createNewFile());
-		OutputStream os=new FileOutputStream(file2,true);
-		os.write(a);
-		System.out.println("写入完成");
+//		OutputStream os=new FileOutputStream(file2,true);
+//		os.write(a);
+//		System.out.println("写入完成");
+		
+		byte[] b=new byte[1024];
+		InputStream is1=new FileInputStream(file);
+		OutputStream os1=new FileOutputStream(file2);
+		int i=is1.read(b);
+		while(i!=-1){
+			os1.write(b,0,i);
+			i=is1.read(b);
+		}
+		os1.close();
+		is1.close();
 	}
 
 }
