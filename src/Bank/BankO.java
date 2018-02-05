@@ -44,12 +44,15 @@ public class BankO {
 				System.out.println("ÇëÑ¡ÔñÄúµÄ´æ¿î½ğ¶î");
 				Scanner putmon=new Scanner(System.in);
 				int a=putmon.nextInt();
-				monpack.add(a);
+//				monpack.add(a);
 				int m=u_.getMoney();
 				int money=(int)m+(int)a;
-				System.out.println("ÄúµÄÓà¶îÎª:"+money);	
+				System.out.println("ÄúµÄÓà¶îÎª:"+money);
+//				monpack.set(money, n);
+				u_.setMoney(money);
 			}
-				System.out.println("ÕËºÅ»òÃÜÂëÓĞÎó£¬µÇÂ½Ê§°Ü");
+		}else{
+			System.out.println("ÕËºÅ»òÃÜÂëÓĞÎó£¬µÇÂ½Ê§°Ü");
 		}
 	}
 	public void Quqian(){
@@ -74,6 +77,7 @@ public class BankO {
 					}
 			}
 				
+				break;
 			}else{
 				System.out.println("ÕËºÅ»òÃÜÂëÓĞÎó£¬µÇÂ½Ê§°Ü");	
 			}

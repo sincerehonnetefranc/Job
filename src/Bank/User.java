@@ -2,18 +2,25 @@ package Bank;
 
 public class User {
 	private String name;
-	private Integer Cardnum;
+	private int Cardnum;
 	private String PassWord;
-	private Integer money;
+	private int money;
 	public String getName() {
 		return name;
 	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public Integer getMoney() {
+	
+	public int getMoney() {
 		return money;
 	}
+
+	public void setMoney(int money) {
+		this.money = money;
+	}
+
+	public void setCardnum(int cardnum) {
+		Cardnum = cardnum;
+	}
+
 	public void setMoney(Integer money) {
 		this.money = money;
 	}
